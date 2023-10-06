@@ -1,0 +1,273 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: rgb(255, 255, 255);
+    background-color: b1lack;
+
+}
+
+nav {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 80px;
+}
+
+label.logo {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: solid;
+    line-height: 80px;
+    padding: 2em 100px;
+    font-weight: bold
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    text-transform: uppercase
+}
+
+a {
+    background: rgba(0, 0, 0, 0.089);
+    transition: .5s;
+    padding: 05px 10px 7px 10px;
+    border-radius: 10px;
+
+}
+
+a.active {
+    background: rgba(255, 255, 255, 0.089);
+    color: red;
+    transition: .5s;
+    padding: 05px 10px 7px 10px;
+    border-radius: 10px;
+
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.089);
+    transition: .5s;
+    padding: 05px 10px 7px 10px;
+    border-radius: 10px;
+
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: rgb(255, 0, 0);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check {
+    display: none;
+
+
+}
+
+.image-grid {
+    --gap: 16px;
+    --num-cols: 3;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    margin: 3em;
+
+
+
+}
+
+.image-grid>img {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+
+
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+.photo {
+    margin-bottom: 1em;
+    gap: var(--gap);
+}
+
+/*@media screen and (max-width:858) {
+    .image-grid {
+        --num-cols: 2;
+        --row-height:200px;
+    }
+}*/
+
+
+@media (max-width:952px) {
+    lable.logo {
+        font-size: 30px;
+        padding-left: auto;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(27, 27, 31);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transform: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        font-size: 20px;
+        margin: 50px 0;
+
+    }
+
+    #check:checked~ul {
+        left: 0;
+        transition: all .5s;
+    }
+
+    #check:not(:checked)~ul {
+        left: -100%;
+        transition: all .5s;
+    }
+
+    .image-grid {
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+
+}
+
+.p6030 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 2em;
+    padding: 2em;
+
+}
+
+.p6030>div {
+    background: #eee
+}
+
+.p6030>div:nth-child(odd) {
+    background: #ddd
+}
+
+.text {
+    padding: 1em;
+
+}
+
+.btn {
+    padding: 2px;
+
+}
+
+.title {
+    margin-left: 100px;
+}
+
+
+
+
+.required::after {
+    content: '*';
+}
+
+.about-main {
+    text-align: center;
+    display: block
+}
+
+.video-container {
+    padding: 2em;
+    margin: auto;
+    background-color: rgb(71, 71, 71, 0.5);
+    height: 80%;
+    width: 625px;
+    object-fit: cover;
+    text-align: center;
+
+}
+
+.about-video-desc {
+    padding: 20px;
+    margin: 2em;
+}
+
+.map {
+    padding: 2em;
+    margin: auto;
+    background-color: rgba(71, 71, 71, 0.5);
+    height: 80%;
+    width: 625px;
+    object-fit: cover;
+}
+
+.contact {
+
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.invis {
+    color: rgb(233, 233, 233);
+    text-align: center;
+}
+
+.con-head {
+    text-align: center;
+}
